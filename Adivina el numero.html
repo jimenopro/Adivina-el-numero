@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Adivina el numero</title>
+		<script>
+		//Juego, adivina el numero
+		var min= 1;
+		var max=50;
+		var aleatorio = Math.floor(Math.random() * max - min + 1)+ min;
+		var intentos=0;
+		var nombre= prompt ("Hola inutil, vamos a jugar a un juego, cual es tu nombre gilipollas?");
+		var numero;
+
+		for(intentos; intentos<50; intentos ++){
+			numero = parseInt(prompt(nombre+" , dime un numero del "+min+" al "+max));
+
+			if (numero >=min && numero <=max){
+				if(numero<aleatorio){
+					alert("El numero que has puesto es más pequeño que el que pienso, matao");
+				}
+				if(numero>aleatorio){
+					alert("El numero que has puesto es mayor al que pienso, matao");
+				}
+				if (numero==aleatorio){
+					alert("Buen chico, lo has acertado, ahora eres menos tonto");
+					document.writeln(intentos); 
+					break;
+				}
+			
+			}
+		
+				
+			
+			else{
+				alert("Ingresa un numero del "+min+" al "+max+" hijodeputa");
+			}
+		}
+
+
+		</script>
+	</head>
+
+	<body>
+		
+	</body>
+</html>
